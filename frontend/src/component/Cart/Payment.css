@@ -1,0 +1,80 @@
+/* Payment.css */
+.paymentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.paymentForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paymentFormBtn {
+  padding: 10px 20px;
+  background-color: #1174f6;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.paymentFormBtn:hover {
+  background-color: #4285f4;
+}
+
+/* Styling the payment container */
+.paymentContainer {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px;
+  margin-left: 550px;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #dbd5dc;
+}
+
+/* Styling the form */
+.paymentForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling the submit button */
+.paymentFormBtn {
+  margin-top: 20px;
+}
+
+/* Styling the CheckoutSteps component */
+.checkoutSteps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkoutStep {
+  display: flex;
+  align-items: center;
+}
+
+.checkoutStepIcon {
+  font-size: 24px;
+  color: #4285f4;
+  margin-right: 8px;
+}
+
+.checkoutStepText {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}

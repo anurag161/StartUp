@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100&family=Didact+Gothic&display=swap");
+
+.policy-container {
+  max-width: 600px;
+  margin: 150px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.holy {
+  text-align: center;
+  padding-left: 330px;
+}
+.he {
+  color: purple;
+  font-family: "Catamaran";
+}
+
+.home-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.back-link {
+  display: block;
+  margin-top: 20px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

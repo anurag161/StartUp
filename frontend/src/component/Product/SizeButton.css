@@ -1,0 +1,51 @@
+/* SizeButton.css */
+.size-button {
+  text-align: center;
+  margin: 30px;
+}
+
+.show-button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.show-button:hover {
+  background-color: #323334;
+}
+
+.popup {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-image {
+  max-width: 100%;
+  height: auto;
+  z-index: 12;
+}
+
+.close-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.close-button:hover {
+  background-color: #1a1a1a;
+}

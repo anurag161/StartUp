@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100&family=Didact+Gothic&display=swap");
+
+.termBox {
+  margin: 200px;
+  font-family: "Catamaran";
+  color: purple;
+}
+
+.termBox > p {
+  color: black;
+}

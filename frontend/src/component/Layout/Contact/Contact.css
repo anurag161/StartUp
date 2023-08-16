@@ -1,0 +1,79 @@
+/* Contact.css */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+.contactContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.contact > h2 {
+  font-family: "Comfortaa";
+  color: purple;
+  text-align: center;
+  font-size: 60px;
+}
+
+.contactCard {
+  background-color: whitesmoke;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.leftCard {
+  background-color: white;
+  margin-left: 60px;
+}
+
+.rightCard {
+  background-color: white;
+  color: black;
+  padding-left: 60px;
+}
+
+.contactCard h3 {
+  font-family: "Kanit";
+  margin-top: 0;
+}
+
+.contactCard p {
+  margin: 8px 0;
+  font-family: "Kanit";
+}
+
+.mail {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.mail:hover {
+  text-decoration: underline;
+}
+
+.contactCard a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contactCard a:hover {
+  text-decoration: underline;
+}
+
+.contactCard Button {
+  background-color: #0a0a0a;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.contactCard Button:hover {
+  background-color: #272829;
+}

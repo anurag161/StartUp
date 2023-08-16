@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Concert+One&family=Kablammo&family=Zeyada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&family=Kaushan+Script&family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@300&display=swap");
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+h1 {
+  margin: 20px;
+  color: black;
+  font-family: "Cinzel";
+  text-align: center;
+  font-size: 70px;
+  text-decoration: underline;
+}
+
+section {
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.product {
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: top;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.product img {
+  width: 450px;
+  height: 450px;
+  padding: 60px;
+}
+
+.product h3 {
+  margin: 10px 0;
+}
+
+.product p {
+  margin: 5px 0;
+}
+
+.product a {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.horizontal-line {
+  border: none;
+  height: 2px;
+  background-color: #f79540;
+  margin: 10px 0;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Apply the following styles to the form and its children */
+.feed {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Remove default styles for input and textarea */
+.feed input,
+.feed textarea {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  resize: none; /* Remove textarea resize handle */
+  margin-bottom: 15px; /* Add spacing between input fields */
+  padding: 5px 0; /* Add padding to adjust the distance from text to line */
+}
+
+/* Add custom bottom border style to input and textarea */
+.feed input,
+.feed textarea {
+  border-bottom: 2px solid #333; /* Customize the line color and thickness */
+}
+
+/* Remove bottom border for input and textarea on focus */
+.feed input:focus,
+.feed textarea:focus {
+  border-bottom: none;
+}
+
+/* Style placeholder text */
+.feed input::placeholder,
+.feed textarea::placeholder {
+  color: black; /* Customize the placeholder text color */
+}
+
+/* Optional: Style the form submit button */
+.feed button[type="submit"] {
+  background-color: #363131;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.two {
+  font-family: "Cairo Play";
+  font-size: 60px;
+  text-align: center;
+}
+
+.say {
+  background-color: #f0dbdb;
+}
+
+.strip {
+  background-color: #f5ebe0;
+  text-align: center;
+  color: rgb(244, 115, 214);
+}
+
+.products {
+  margin: 40px;
+  background-color: #f5ebe0;
+}
+
+/* Apply animation to the "strip" class */
+.strip {
+  animation: blink 1s infinite;
+}
+
+/* Define the blinking animation */
+@keyframes blink {
+  0% {
+    opacity: 0; /* Set the opacity to 0 (invisible) */
+  }
+  50% {
+    opacity: 1; /* Set the opacity to 1 (visible) */
+  }
+  100% {
+    opacity: 0; /* Set the opacity to 0 (invisible) */
+  }
+}
+
+.container {
+  display: inline;
+  margin: 2vmax auto;
+  width: 20vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.productCard {
+  width: 14vmax;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  margin: 2vmax;
+  transition: all 0.5s;
+  padding-bottom: 0.5vmax;
+  padding-right: 60px;
+  padding-left: 40px;
+  text-align: center;
+}
+
+.productCard > img {
+  width: 310px;
+  height: 360px;
+  justify-content: center;
+}
+
+.productCard > div {
+  margin: 0.5vmax;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.productCardSpan {
+  margin: 0.5vmax;
+  font: 300 0.7vmax "Roboto";
+}
+
+.productCard > p {
+  font-family: "Kaushan Script";
+  font-size: 1.2vmax;
+  margin: 1vmax 0.5vmax;
+  margin-bottom: 0;
+}
+
+.productCard > span {
+  margin: 0.5vmax;
+  color: black;
+  font-family: "Russo One", sans-serif;
+  font-size: 1.3vmax;
+}
+
+.productCard:hover {
+  box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+
+  transform: translateY(-1vmax);
+}
+
+.mrp {
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+
+@media screen and (max-width: 600px) {
+  .productCard > p {
+    font-size: 1.7vmax;
+  }
+
+  .productCard > div {
+    margin: 0vmax;
+    display: block;
+  }
+
+  .productCard > span {
+    font-size: 1.5vmax;
+  }
+
+  .productCard > div > span {
+    margin: 0 0.5vmax;
+    font: 300 1vmax "Roboto";
+  }
+}

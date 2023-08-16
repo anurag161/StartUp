@@ -1,0 +1,337 @@
+/* Header.css */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&family=Ubuntu:wght@300&display=swap");
+
+nav {
+  background-color: #fefcf3;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center the items vertically */
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Ubuntu", Courier, monospace;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.diff:hover {
+  color: black;
+}
+
+.right {
+  float: right;
+}
+
+/* Adjust the size and spacing of the icons */
+a i {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+/* Add animation to the icons */
+a i:hover {
+  color: black;
+  animation: heartBeat 1s infinite;
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.dropdown {
+  position: relative;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f8f8f8;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu li {
+  margin: 10px 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dropdown-menu li a:hover {
+  color: #555;
+}
+
+/* Add space between the tags */
+li:not(.dropdown) {
+  margin-left: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  padding: 15px;
+  padding-right: 400px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-bar button[type="submit"] {
+  padding: 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.search-bar button[type="submit"]:hover {
+  background-color: #555;
+}
+
+.big-navbar {
+  position: relative;
+  /* Other navbar styles */
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo2 img {
+  width: 280px;
+  height: 100px;
+  padding-left: 100px;
+}
+
+/* .logo2 {
+  float: inline-start;
+} */
+
+.header_optionLineOne {
+  font-size: 10px;
+  color: black;
+}
+
+.header_optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+  color: black;
+}
+
+/* Header.css */
+
+.navbar {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  /* justify-content: center; */
+}
+
+nav ul li a {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+  color: #0b0b0b;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #000;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Style the navigation menu */
+.navbar {
+  width: 100%;
+  background-color: #0b0b0b;
+  overflow: auto;
+}
+
+/* Navigation links */
+.navbar a {
+  display: inline;
+  align-items: stretch;
+  justify-content: space-evenly;
+  padding: 12px;
+  padding-left: 230px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 25%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  text-align: center; /* If you want the text to be centered */
+}
+
+/* Add a background color on mouse-over */
+.navbar a:hover {
+  color: #f5ebe0;
+}
+
+/* Header.css */
+
+/* Existing CSS styles... */
+
+/* Media query for screens with a maximum width of 768px (typical phone screens) */
+@media (max-width: 768px) {
+  .big-navbar {
+    display: block;
+  }
+
+  .small {
+    display: none;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+.narrow {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  font-family: "Russo One";
+  font-size: 50px;
+  top: 60%;
+  left: 50%;
+  right: 15%;
+  transform: translate(-50%, -50%);
+}
+
+.narr-dup {
+  position: relative;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+.narr-dup-green {
+  color: green;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: large;
+  padding-top: 10px;
+}
+
+/* new code */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar-right li {
+  margin-left: 20px;
+}
+
+.small {
+  display: flex;
+  padding-left: 300px;
+}
+
+.speedDial {
+  position: fixed;
+  right: 3vmax;
+  top: 5vmax;
+}
+
+.speedDialIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+}
