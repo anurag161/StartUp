@@ -65,6 +65,8 @@ const SignIn = ({ history }) => {
     console.log("dispatch", dispatch(login(loginEmail, loginPassword)));
   };
 
+  const [registered, setRegistered] = useState(false);
+
   const registerSubmit = (e) => {
     e.preventDefault();
 
@@ -75,6 +77,7 @@ const SignIn = ({ history }) => {
     myForm.set("email", email);
     myForm.set("password", password);
     dispatch(register(myForm));
+    navigate("/SignIn");
   };
 
   const registerDataChange = (e) => {

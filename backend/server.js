@@ -4,12 +4,12 @@ const connectDatabase = require("./config/database");
 const cors = require("cors");
 const Razorpay = require("razorpay");
 app.use(cors());
-// app.use(
-//   cors({
-//     origin: "http://localhost:3000",
-//     methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
-//   })
-// );
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
+  })
+);
 
 // Handling Uncaught Exception
 
