@@ -11,6 +11,8 @@ const ConfirmOrder = ({ history }) => {
   const { user } = useSelector((state) => state.user);
   const navigate = useNavigate();
 
+  console.log(user);
+
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.quantity * item.price,
     0

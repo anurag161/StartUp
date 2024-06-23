@@ -97,7 +97,7 @@ const Cart = () => {
                         >
                           -
                         </button>
-                        <input type="number" value={item.quantity} readOnly />
+                        <span>{item.quantity}</span>
                         <button
                           className="plus"
                           onClick={() =>

@@ -73,7 +73,7 @@
   background-color: rgba(0, 0, 0, 0.767);
 }
 
-.cartInput > input {
+.cartInput > span {
   border: none;
   padding: 0.5vmax;
   width: 1vmax;
@@ -150,7 +150,7 @@
     padding: 1.5vmax;
   }
 
-  .cartInput > input {
+  .cartInput > span {
     width: 2vmax;
     padding: 1.5vmax;
     font: 400 1.8vmax "Roboto";

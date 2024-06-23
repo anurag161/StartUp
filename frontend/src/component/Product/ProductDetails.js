@@ -210,7 +210,7 @@ const ProductDetails = () => {
                 <div className="detailsBlock-3-1">
                   <div className="detailsBlock-3-1-1">
                     <button onClick={decreaseQuantity}>-</button>
-                    <input readOnly type="number" value={quantity} />
+                    <span className="quant">{quantity}</span>
                     <button onClick={increaseQuantity}>+</button>
                   </div>
                   <button

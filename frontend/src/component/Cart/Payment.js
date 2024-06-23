@@ -7,14 +7,15 @@ import axios from "axios";
 import "./Payment.css";
 import { createOrder, clearErrors } from "../../actions/orderAction";
 import { useNavigate } from "react-router-dom";
+import { Typography } from "@mui/material";
 // import Razorpay from "razorpay";
 
 const Payment = () => {
   const orderInfo = JSON.parse(sessionStorage.getItem("orderInfo"));
 
-  const dispatch = useDispatch();
-  const alert = useAlert();
-  const payBtn = useRef(null);
+  // const dispatch = useDispatch();
+  // const alert = useAlert();
+  // const payBtn = useRef(null);
 
   const { shippingInfo, cartItems } = useSelector((state) => state.cart);
   const { user } = useSelector((state) => state.user);
@@ -33,13 +34,8 @@ const Payment = () => {
     totalPrice: orderInfo.totalPrice,
   };
 
-  const submitHandler = async (e) => {
-    e.preventDefault();
 
-    payBtn.current.disabled = true;
-  };
 
-  let result;
 
   const handleOpenRazorpay = (data) => {
     const options = {
@@ -55,7 +51,6 @@ const Payment = () => {
           .post("/api/v1/verify", { response: response })
           .then((res) => {
             console.log(res, "37");
-            result = true;
           })
           .catch((err) => {
             console.log(err);
@@ -85,17 +80,34 @@ const Payment = () => {
       <MetaData title="Payment" />
       <CheckoutSteps activeStep={2} />
       <div className="paymentContainer">
-        <form className="paymentForm" onSubmit={(e) => submitHandler(e)}>
-          <input
-            type="submit"
-            value={`Pay - ₹${orderInfo && orderInfo.totalPrice}`}
-            ref={payBtn}
-            className="paymentFormBtn"
-          />
-        </form>
-        <button onClick={() => handlePayment(orderInfo.totalPrice)}>{`Pay - ₹${
-          orderInfo && orderInfo.totalPrice
-        }`}</button>
+        <div className="orderSummary">
+          <Typography className="heads">Order Review</Typography>
+          <div>
+            <div>
+              <p>Subtotal:</p>
+              <span>₹{orderInfo.subtotal}</span>
+            </div>
+            <div>
+              <p>Shipping Charges:</p>
+              <span>₹{orderInfo.shippingCharges}</span>
+            </div>
+            <div>
+              <p>GST:</p>
+              <span>₹{0}</span>
+            </div>
+          </div>
+
+          <div className="orderSummaryTotal">
+            <p>
+              <b>Total:</b>
+            </p>
+            <span>₹{orderInfo.totalPrice}</span>
+          </div>
+        </div>
+        <button
+          className="paymentFormBtn"
+          onClick={() => handlePayment(orderInfo.totalPrice)}
+        >{`Confirm Order & Pay - ₹${orderInfo && orderInfo.totalPrice}`}</button>
       </div>
     </Fragment>
   );

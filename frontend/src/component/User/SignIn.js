@@ -24,20 +24,35 @@ const SignIn = ({ history }) => {
     var userObject = jwt_decode(res.credential);
     console.log(userObject);
 
-    const myForm = new FormData();
+    // const googleForm = new FormData();
 
-    myForm.set("name", userObject.name);
-    myForm.set("mobile", 88888888);
-    myForm.set("email", userObject.email);
-    myForm.set("password", "nvfnnfkkkvbvhvbhhkkbfkfbkfek");
-    dispatch(register(myForm));
+    // googleForm.set("name", userObject.name);
+    // console.log("Set name: ", userObject.name);
+
+    // googleForm.set("mobile", "88888888"); // Ensure mobile is a string
+    // console.log("Set mobile: ", "88888888");
+
+    // googleForm.set("email", userObject.email);
+    // console.log("Set email: ", userObject.email);
+
+    // googleForm.set("password", "nvfnnfkkkvbvhvbhhkkbfkfbkfek");
+    // console.log("Set password: ", "nvfnnfkkkvbvhvbhhkkbfkfbkfek");
+
+    const googleForm = {
+      name: userObject.name,
+      mobile: "",
+      email: userObject.email,
+      passowrd: "",
+    };
+    console.log(googleForm);
+    dispatch(register(googleForm));
   };
   const onFailure = (res) => {
     console.log("login failed! ", res);
   };
   // common authentication
   const dispatch = useDispatch();
-  const alert = useAlert();
+  const alertCustom = useAlert();
   const navigate = useNavigate();
 
   const { error, loading, isAuthenticated } = useSelector(
@@ -59,13 +74,15 @@ const SignIn = ({ history }) => {
   });
   const { name, mobile, email, password } = user;
 
+  const [registered, setRegistered] = useState(false);
+  const [loggedIn, setloggedIn] = useState(false);
+
   const loginSubmit = (e) => {
     e.preventDefault();
     dispatch(login(loginEmail, loginPassword));
     console.log("dispatch", dispatch(login(loginEmail, loginPassword)));
+    setloggedIn(false);
   };
-
-  const [registered, setRegistered] = useState(false);
 
   const registerSubmit = (e) => {
     e.preventDefault();
@@ -77,7 +94,6 @@ const SignIn = ({ history }) => {
     myForm.set("email", email);
     myForm.set("password", password);
     dispatch(register(myForm));
-    navigate("/SignIn");
   };
 
   const registerDataChange = (e) => {
@@ -88,15 +104,30 @@ const SignIn = ({ history }) => {
 
   useEffect(() => {
     if (error) {
-      alert.error(error);
+      alertCustom.error(error);
       dispatch(clearErrors());
     }
+
+    // if (registered && !loggedIn) {
+    //   navigate("/SignIn");
+    //   setRegistered(false);
+    //   //alert("hello reload the page please");
+    // }
 
     if (isAuthenticated) {
       console.log("logged in");
       navigate("/");
     }
-  }, [dispatch, error, alert, history, isAuthenticated]);
+  }, [
+    dispatch,
+    error,
+    alertCustom,
+    history,
+    isAuthenticated,
+    navigate,
+    registered,
+    loggedIn,
+  ]);
 
   let status = "";
 

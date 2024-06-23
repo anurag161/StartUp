@@ -77,7 +77,7 @@
 .detailsBlock-3-1-1 > button {
   border: none;
   background-color: rgba(0, 0, 0, 0.616);
-  padding: 0.5vmax;
+  padding: 1vmax;
   cursor: pointer;
   color: white;
   font-family: "Kanit";
@@ -88,7 +88,7 @@
   background-color: rgba(0, 0, 0, 0.767);
 }
 
-.detailsBlock-3-1-1 > input {
+.detailsBlock-3-1-1 > .quant {
   border: none;
   padding: 0.5vmax;
   width: 1vmax;

@@ -1,9 +1,10 @@
-/* Payment.css */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
 .paymentContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .paymentForm {
@@ -14,17 +15,18 @@
 
 .paymentFormBtn {
   padding: 10px 20px;
-  background-color: #1174f6;
-  color: #fff;
+  background-color: rgb(247, 60, 244);
+  color: #000000;
   font-size: 18px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font: 900 1vmax "Comfortaa";
 }
 
 .paymentFormBtn:hover {
-  background-color: #4285f4;
+  background-color: rgb(247, 60, 244);
 }
 
 /* Styling the payment container */

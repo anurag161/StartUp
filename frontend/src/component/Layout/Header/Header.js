@@ -79,21 +79,21 @@ const Header = () => {
                 Contact Us
               </a>
             </li>
-            <li>
+            {isAuthenticated && <li>
               <a href="/trackOrder" className="diff right">
                 <i className="fas fa-map-marker"></i>
               </a>
-            </li>
-            <li>
+            </li>}
+            { isAuthenticated && <li>
               <a href="/cart" className="diff right">
                 <i className="fas fa-shopping-cart"></i> {`${cartItems.length}`}
               </a>
-            </li>
-            <li>
+            </li>}
+            { isAuthenticated && <li>
               <a href="/account" className="diff right">
                 <i className="fa-solid fa-user"></i>
               </a>
-            </li>
+            </li>}
           </div>
           <li>
             <p>
